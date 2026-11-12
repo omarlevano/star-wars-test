@@ -1,0 +1,4 @@
+# Archivos del sistema que no deben subirse
+.DS_Store
+Thumbs.db
+__MACOSX/
