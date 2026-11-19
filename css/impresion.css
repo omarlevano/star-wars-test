@@ -1,9 +1,3 @@
-/* =====================================================================
-   IMPRESION.CSS · Sesión 11
-   Se carga con <link ... media="print">: solo se aplica al imprimir
-   (Ctrl + P o «Guardar como PDF»).
-   ===================================================================== */
-
 /* Fuera lo que no sirve en papel */
 #cabecera,
 #btn-arriba,

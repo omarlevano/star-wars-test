@@ -1,30 +1,20 @@
-/* =====================================================================
-   CRONOLOGIA.JS · Star Wars · Sesión 11
-   $(document).ready(): espera a que la página cargue
-   Sintaxis de jQuery: $(selector).accion()
-   ===================================================================== */
-
 $(document).ready(function () {
 
-  /* --- Plugin FontFlex: título que se adapta al ancho de la ventana --- */
+  // FontFlex
   $('.titulo-flex').fontFlex(28, 64, 18);
 
-
-  /* --- Plugin bxSlider: banner animado ----------------------------- */
+  // bxSlider
   $('.banner').bxSlider({
-    mode: 'horizontal',   // las imágenes se deslizan de lado
+    mode: 'horizontal',
     auto: true,
     pause: 3500,
-    speed: 800,           // duración del deslizamiento (ms)
+    speed: 800,
     captions: true,
     controls: true,
     autoHover: true
   });
 
-
-  /* --- Plugin SweetAlert2: elegir el lado de la Fuerza ---------------
-     La ventana tiene dos botones; según cuál se presione, .then()
-     muestra un mensaje distinto */
+  // SweetAlert2
   $('#elegir-lado').click(function () {
     Swal.fire({
       title: '¿De qué lado de la Fuerza estás?',
@@ -47,8 +37,7 @@ $(document).ready(function () {
     });
   });
 
-
-  /* --- Plugin Timelinr: línea de tiempo ---------------------------- */
+  // Timelinr
   $('#timeline').timelinr({
     arrowKeys: 'true',
     autoPlay: 'true',

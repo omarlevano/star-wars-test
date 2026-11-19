@@ -1,11 +1,4 @@
-/* =====================================================================
-   SESION11.CSS · Star Wars · Animaciones, media queries y plugins
-   ===================================================================== */
-
-
-/* ---------------------------------------------------------------------
-   APERTURA: contenedor de las animaciones
-   --------------------------------------------------------------------- */
+/* Apertura */
 .apertura {
   position: relative;
   overflow: hidden;
@@ -24,10 +17,7 @@
   letter-spacing: 0.08em;
 }
 
-
-/* --- 1. Hiperespacio: el fondo de estrellas se desplaza sin parar ---
-   Se anima background-position; las estrellas son puntos hechos con
-   radial-gradient que se repiten */
+/* 1. Hiperespacio: el fondo de estrellas se desplaza sin parar */
 @keyframes viajar {
   from { background-position: 0 0, 0 0; }
   to   { background-position: -400px 0, -200px 0; }
@@ -45,10 +35,7 @@
   animation: viajar 8s linear infinite;
 }
 
-
-/* --- 2. Texto de apertura en perspectiva ---
-   El escenario da la profundidad (perspective) y el texto viaja de abajo
-   hacia arriba, inclinado con rotateX */
+/* 2. Texto de apertura en perspectiva */
 .escenario {
   position: relative;
   z-index: 1;
@@ -85,14 +72,12 @@
   letter-spacing: 0.15em;
 }
 
-/* animation-play-state: al pasar el mouse el texto se detiene para leerlo */
+/* animation-play-state: pausa con el mouse */
 .escenario:hover .texto-apertura {
   animation-play-state: paused;
 }
 
-
-/* --- 3. Botón como sable: el brillo se enciende y se apaga ---
-   animation-direction: alternate va de from a to y regresa */
+/* 3. Botón como sable: el brillo se enciende y se apaga */
 @keyframes zumbido {
   from { box-shadow: 0 0 6px 1px #3FA9F5; }
   to   { box-shadow: 0 0 22px 6px #3FA9F5; }
@@ -113,8 +98,7 @@
   animation: zumbido 1.2s ease-in-out infinite alternate;
 }
 
-
-/* --- 4. Entrada suave de las secciones: animation-fill-mode --- */
+/* 4. Entrada suave de las secciones: animation-fill-mode */
 @keyframes aparecer {
   from { opacity: 0; transform: translateY(25px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -128,10 +112,7 @@
   animation-delay: 0.3s;
 }
 
-
-/* ---------------------------------------------------------------------
-   PLUGIN bxSlider · ajustes propios (las flechas las dibujamos con CSS)
-   --------------------------------------------------------------------- */
+/* Plugin bxSlider: flechas dibujadas con CSS */
 .bx-wrapper {
   margin-bottom: 40px;
   border: 1px solid rgba(255, 212, 71, 0.3);
@@ -184,11 +165,7 @@
   background: var(--color-acento);
 }
 
-
-/* ---------------------------------------------------------------------
-   PLUGIN Timelinr · línea de tiempo de las 9 películas
-   El plugin necesita anchos fijos para calcular el desplazamiento
-   --------------------------------------------------------------------- */
+/* Plugin Timelinr */
 .nota-linea {
   font-size: 0.9rem;
   color: #C9C9D6;
@@ -303,12 +280,9 @@
 #next { right: 15px; }
 #prev { left: 15px; }
 
+/* Media queries de esta sesión */
 
-/* ---------------------------------------------------------------------
-   MEDIA QUERIES DE ESTA SESIÓN
-   --------------------------------------------------------------------- */
-
-/* AND + orientación: celular girado en horizontal → escenario más bajo */
+/* AND + orientación: celular en horizontal */
 @media screen and (max-width: 900px) and (orientation: landscape) {
   .escenario {
     height: 180px;
@@ -326,7 +300,7 @@
   }
 }
 
-/* Accesibilidad: sin animaciones si la persona lo pidió en su sistema */
+/* Sin animaciones si el sistema pide reducir movimiento */
 @media (prefers-reduced-motion: reduce) {
   .hiperespacio,
   .texto-apertura,

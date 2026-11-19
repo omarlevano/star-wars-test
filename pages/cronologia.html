@@ -5,21 +5,21 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Cronología de la saga — Star Wars</title>
+  <title>Cronología de la saga | Star Wars</title>
   <meta name="description" content="Cronología de Star Wars: banner animado, línea de tiempo de las nueve películas, texto de apertura animado y la elección del lado de la Fuerza." />
 
   <link rel="icon" type="image/png" href="../media/favicon/favicon-32.png" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-  <!-- Estilos de los plugins (antes que los nuestros para poder modificarlos) -->
+  <!-- Estilos de los plugins (antes que los propios) -->
   <link rel="stylesheet" href="../css/plugins/jquery.bxslider.css" />
   <link rel="stylesheet" href="../css/plugins/sweetalert2.min.css" />
 
   <link rel="stylesheet" href="../css/estilo.css" />
-  <!-- S11 · estilos de esta sesión -->
+  <!-- Estilos de esta sesión -->
   <link rel="stylesheet" href="../css/sesion11.css" />
 
-  <!-- S11 · media query en el link: este CSS solo se usa al imprimir -->
+  <!-- Solo al imprimir -->
   <link rel="stylesheet" href="../css/impresion.css" media="print" />
 </head>
 
@@ -38,24 +38,17 @@
         <li><a href="peliculas.html"><i class="fa-solid fa-film" aria-hidden="true"></i> Películas</a></li>
         <li><a href="academia.html"><i class="fa-solid fa-jedi" aria-hidden="true"></i> Academia</a></li>
         <li><a href="holocron.html"><i class="fa-solid fa-cube" aria-hidden="true"></i> Holocrón</a></li>
-        <!-- S11 · página nueva -->
         <li><a href="cronologia.html" aria-current="page"><i class="fa-solid fa-timeline" aria-hidden="true"></i> Cronología</a></li>
       </ul>
     </nav>
   </header>
 
-
   <main id="contenido">
 
-    <!-- =================================================================
-         S11 · ANIMACIONES CON @keyframes
-         Estrellas que viajan (hiperespacio) + texto de apertura que se
-         aleja en perspectiva. Pasa el mouse: el texto se pausa.
-         ================================================================= -->
+    <!-- Animaciones con @keyframes -->
     <section class="apertura">
       <div class="hiperespacio" aria-hidden="true"></div>
 
-      <!-- S11 · plugin FontFlex: el título cambia de tamaño con la ventana -->
       <h1 class="titulo-flex">Cronología de la saga</h1>
 
       <div class="escenario">
@@ -74,11 +67,7 @@
       </button>
     </section>
 
-
-    <!-- =================================================================
-         S11 · BANNER ANIMADO con el plugin bxSlider
-         Cada diapositiva en su div: el plugin toma el title como leyenda
-         ================================================================= -->
+    <!-- Banner animado con el plugin bxSlider -->
     <section class="seccion entrada" aria-labelledby="titulo-banner">
       <h2 id="titulo-banner">Galería de la saga</h2>
 
@@ -89,11 +78,7 @@
       </div>
     </section>
 
-
-    <!-- =================================================================
-         S11 · LÍNEA DE TIEMPO con el plugin Timelinr
-         #dates = los años · #issues = el contenido de cada año
-         ================================================================= -->
+    <!-- Línea de tiempo con el plugin Timelinr -->
     <section class="seccion entrada" aria-labelledby="titulo-linea">
       <h2 id="titulo-linea">Las nueve películas en el tiempo</h2>
       <p class="nota-linea">Usa las flechas del teclado o los botones + y −.</p>
@@ -168,7 +153,6 @@
 
   </main>
 
-
   <footer id="pie">
     <p><a href="../index.html"><i class="fa-solid fa-house" aria-hidden="true"></i> Volver a la página de inicio</a></p>
     <p><small>Sitio de práctica del curso Diseño y Desarrollo Web · ISIL</small></p>
@@ -178,8 +162,7 @@
     <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
   </a>
 
-
-  <!-- S11 · scripts al final: 1) jQuery · 2) plugins · 3) nuestro código -->
+  <!-- Scripts: jQuery, plugins y código propio -->
   <script src="../js/jquery-3.6.0.min.js"></script>
   <script src="../js/jquery.fontflex.js"></script>
   <script src="../js/jquery.bxslider.js"></script>
